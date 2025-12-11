@@ -1,0 +1,22 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environments (Sesuai gambar Anda ada folder venv)
+venv/
+env/
+.venv/
+
+# Environment Variables (WAJIB: Agar API Key tidak dicuri)
+.env
+
+# Streamlit specific
+.streamlit/
+
+# OS system files
+.DS_Store
+Thumbs.db
+
+# IDE settings (VS Code)
+.vscode/
