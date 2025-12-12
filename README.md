@@ -1,57 +1,102 @@
+
 # 🌏 Multicultural Presentation Script Generator
 
-Aplikasi berbasis AI yang membantu profesional bisnis membuat naskah presentasi yang sensitif secara budaya. Aplikasi ini mengubah slide PowerPoint standar menjadi naskah lisan yang disesuaikan dengan etiket dan gaya komunikasi negara target (misal: Jepang, Indonesia, Jerman).
+Aplikasi berbasis AI yang membantu profesional bisnis membuat **naskah presentasi yang sensitif secara budaya**.
+Aplikasi ini mengubah slide PowerPoint standar menjadi naskah lisan yang disesuaikan dengan **etiket, gaya komunikasi, dan kebiasaan bahasa negara target** (misal: Jepang, Indonesia, Jerman).
+
+---
 
 ## ✨ Fitur Utama
-- **PPT Parsing**: Otomatis mengekstrak teks dari file PowerPoint (.pptx).
-- **Cultural Adaptation**: Menggunakan AI untuk menyisipkan idiom, sapaan, dan gaya bahasa yang sesuai dengan budaya negara tujuan.
-- **AI Engine**: Ditenagai oleh **Google Gemini (gemini-2.5-flash)** untuk kecepatan dan akurasi konteks.
-- **Streamlit UI**: Antarmuka web yang sederhana dan interaktif.
+
+* **PPT Parsing**
+  Mengekstrak teks secara otomatis dari file **.pptx** menggunakan `python-pptx`.
+* **Cultural Adaptation**
+  AI menyisipkan idiom, sapaan, formalitas, serta gaya komunikasi sesuai budaya negara tujuan.
+* **AI Engine (LLM)**
+  Ditenagai oleh **Google Gemini (gemini-2.5-flash)** untuk hasil cepat dan kontekstual.
+* **Streamlit UI**
+  Antarmuka web sederhana, interaktif, dan mudah digunakan.
+* **LangChain Integration**
+  Menggunakan LCEL untuk mengorkestrasi prompt dan pemanggilan model.
+
+---
 
 ## 🛠️ Tech Stack
-- **Bahasa**: Python
-- **Framework UI**: Streamlit
-- **LLM Orchestration**: LangChain (LCEL)
-- **Model AI**: Google Gemini Pro / Flash
-- **Tools**: python-pptx (untuk membaca file slide)
 
-## 🚀 Cara Menjalankan di Lokal (Installation)
+* **Bahasa**: Python
+* **Framework UI**: Streamlit
+* **LLM Orchestration**: LangChain (LCEL)
+* **Model AI**: Google Gemini Pro / Flash
+* **Tools**: python-pptx (PPT parsing)
 
-Ikuti langkah ini untuk menjalankan proyek di komputer Anda:
+---
+
+## 🚀 Cara Menjalankan di Lokal
+
+Ikuti langkah-langkah berikut untuk menjalankan proyek ini di lingkungan lokal Anda.
 
 ### 1. Clone Repository
+
 ```bash
-git clone [https://github.com/USERNAME_ANDA/nama-repo-anda.git](https://github.com/fayzul02/multicultural-script-generatorgit)
-cd nama-repo-anda
-2. Buat Virtual Environment (Opsional tapi Disarankan)
-Bash
+git clone https://github.com/fayzul02/multicultural-script-generator.git
+cd multicultural-script-generator
+```
 
+### 2. Buat Virtual Environment (Opsional, tetapi disarankan)
+
+```bash
 python -m venv venv
-# Windows:
+```
+
+**Aktifkan venv:**
+
+Windows:
+
+```bash
 venv\Scripts\activate
-# Mac/Linux:
+```
+
+Mac/Linux:
+
+```bash
 source venv/bin/activate
-3. Install Dependencies
-Bash
+```
 
+### 3. Install Dependencies
+
+```bash
 pip install -r requirements.txt
-4. Konfigurasi API Key
-Buat file baru bernama .env di dalam folder root proyek. Copy & Paste API Key Google Gemini Anda di sana:
+```
 
-Cuplikan kode
+### 4. Konfigurasi API Key
 
-GOOGLE_API_KEY=masukkan_api_key_anda_disini
-(Dapatkan API Key gratis di Google AI Studio)
+Buat file baru bernama **.env** di folder root proyek.
 
-5. Jalankan Aplikasi
-Bash
+Isi dengan:
 
+```
+GOOGLE_API_KEY=masukkan_api_key_anda
+```
+
+Dapatkan API Key di **Google AI Studio**.
+
+### 5. Jalankan Aplikasi
+
+```bash
 streamlit run app.py
-Aplikasi akan otomatis terbuka di browser Anda pada alamat http://localhost:8501.
+```
 
-📂 Struktur Project
-├── app.py           # File utama (UI Streamlit)
-├── utils.py         # Logika AI & PPT Parsing
-├── requirements.txt # Daftar library yang dibutuhkan
-├── .env             # File konfigurasi API Key (Tidak di-upload ke GitHub)
+Aplikasi akan terbuka otomatis di browser:
+[http://localhost:8501](http://localhost:8501)
+
+---
+
+## 📂 Struktur Project
+
+```
+├── app.py           # Main Streamlit UI
+├── utils.py         # AI logic & PPT parsing
+├── requirements.txt # Dependencies
+├── .env             # API Key config (excluded from GitHub)
 └── README.md        # Dokumentasi
+```
