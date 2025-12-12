@@ -21,7 +21,7 @@ Ikuti langkah ini untuk menjalankan proyek di komputer Anda:
 
 ### 1. Clone Repository
 ```bash
-git clone [https://github.com/USERNAME_ANDA/nama-repo-anda.git](https://github.com/USERNAME_ANDA/nama-repo-anda.git)
+git clone [https://github.com/USERNAME_ANDA/nama-repo-anda.git](https://github.com/fayzul02/multicultural-script-generatorgit)
 cd nama-repo-anda
 2. Buat Virtual Environment (Opsional tapi Disarankan)
 Bash
